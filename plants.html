@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plants | สวนฉว.</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">สวนฉว.</a>
+        <nav>
+            <a href="index.html">หน้าแรก</a>
+            <a href="plants.html">พืช</a>
+            <a href="animals.html">สัตว์</a>
+            <a href="submit.html">จัดการข้อมูล</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <p class="subtitle">PLANT DATABASE</p>
+            <h1>🌿 ฐานข้อมูลพืช</h1>
+            <p>รวบรวมพืชและต้นไม้ที่พบภายในโรงเรียน</p>
+        </section>
+
+        <section class="database-section">
+            <div class="database-heading">
+                <div>
+                    <h2>พืชที่สำรวจพบ</h2>
+                    <p>เรียนรู้ลักษณะและข้อมูลทางชีววิทยาของพืช</p>
+                </div>
+                <span id="plant-count">0 รายการ</span>
+            </div>
+
+            <div class="search-box">
+                <input
+                    type="search"
+                    id="plant-search"
+                    placeholder="ค้นหาชื่อพืช..."
+                >
+            </div>
+
+            <div class="plant-grid" id="plant-list"></div>
+
+            <p class="empty-message" id="empty-message" hidden>
+                ไม่พบข้อมูลพืชที่ค้นหา
+            </p>
+        </section>
+    </main>
+
+    <div class="modal" id="plant-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">×</button>
+            <img id="detail-image" src="" alt="">
+            <div class="modal-info">
+                <h2 id="detail-name"></h2>
+                <p id="detail-scientific"></p>
+                <p><strong>ลักษณะทั่วไป:</strong> <span id="detail-description"></span></p>
+                <p><strong>การจำแนก:</strong> <span id="detail-classification"></span></p>
+                <p><strong>บริเวณที่พบ:</strong> <span id="detail-location"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>สวนฉว. | โครงงานความหลากหลายทางชีวภาพ</p>
+    </footer>
+
+    <script src="js/plants.js"></script>
+</body>
+</html>
