@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จัดการข้อมูล | สวนฉว.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">สวนฉว.</a>
+    <nav>
+      <a href="index.html">หน้าแรก</a>
+      <a href="plants.html">พืช</a>
+      <a href="animals.html">สัตว์</a>
+      <a href="admin.html" class="active">จัดการข้อมูล</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-banner">
+      <p class="subtitle">ADMIN AREA</p>
+      <h1>จัดการข้อมูลโครงงาน</h1>
+      <p>พื้นที่ทดลองสำหรับเตรียมข้อมูลสิ่งมีชีวิต</p>
+    </section>
+    <section class="admin-wrap">
+      <div class="admin-panel">
+        <h2>เพิ่มข้อมูลรายการใหม่</h2>
+        <div class="notice">
+          หน้านี้เป็นระบบตัวอย่างฝั่งเบราว์เซอร์ ข้อมูลจะเก็บในเครื่องและเบราว์เซอร์ที่ใช้เท่านั้น
+          ยังไม่มีระบบเข้าสู่ระบบหรือฐานข้อมูลออนไลน์ จึงห้ามใช้เป็นระบบ Admin ที่ปลอดภัยหรือใส่ข้อมูลสำคัญ
+        </div>
+        <form id="record-form">
+          <div class="field">
+            <label for="record-type">หมวดหมู่</label>
+            <select id="record-type" required><option value="plant">พืช</option><option value="animal">สัตว์</option></select>
+          </div>
+          <div class="field"><label for="record-name">ชื่อสิ่งมีชีวิต</label><input id="record-name" required></div>
+          <div class="field"><label for="record-scientific">ชื่อวิทยาศาสตร์</label><input id="record-scientific"></div>
+          <div class="field"><label for="record-image">ลิงก์ภาพ (ถ้ามี)</label><input id="record-image" type="url" placeholder="https://..."></div>
+          <div class="field"><label for="record-description">ลักษณะทั่วไป</label><textarea id="record-description"></textarea></div>
+          <div class="field"><label for="record-classification">การจำแนกทางชีววิทยา</label><textarea id="record-classification"></textarea></div>
+          <div class="field"><label for="record-location">บริเวณที่พบ</label><input id="record-location"></div>
+          <div class="form-actions">
+            <button class="primary-button" type="submit">บันทึกข้อมูลในเบราว์เซอร์</button>
+            <button class="secondary-button" type="reset">ล้างแบบฟอร์ม</button>
+          </div>
+        </form>
+        <p id="save-message" class="notice" hidden></p>
+      </div>
+    </section>
+  </main>
+  <footer><p>สวนฉว. | โครงงานความหลากหลายทางชีวภาพภายในโรงเรียน</p></footer>
+</body>
+</html>
