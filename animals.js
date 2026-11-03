@@ -1,11 +1,11 @@
 
-// ข้อมูลตัวอย่างสัตว์ (Mockup) ต้องสำรวจและถ่ายภาพสัตว์จริงในโรงเรียนก่อนใช้เป็นข้อมูลโครงงานจริง
+// ข้อมูลตัวอย่างสัตว์ (Mockup)
 const animals = [
   {
     id: 1,
     name: "สุนัข",
     scientific: "Canis lupus familiaris",
-    image: "./animal-หมา.jpg",
+    image: "animal-dog.jpg",
     description: "เป็นสัตว์เลี้ยงลูกด้วยนม มีขนปกคลุมร่างกาย มีสี่ขา มีหาง และเป็นสัตว์ที่มนุษย์นิยมเลี้ยงเป็นเพื่อนหรือช่วยเฝ้าบ้าน",
     classification: "Kingdom: Animalia (อาณาจักรสัตว์)\nPhylum: Chordata (สัตว์มีแกนสันหลัง)\nClass: Mammalia (สัตว์เลี้ยงลูกด้วยนม)\nOrder: Carnivora (สัตว์กินเนื้อ)\nFamily: Canidae (วงศ์สุนัข)\nGenus: Canis (สกุลสุนัข)",
     location: "บริเวณใต้อาคาร (มีซีเคร็ทอยู่บนตึกบ้าง)"
@@ -14,7 +14,7 @@ const animals = [
     id: 2,
     name: "แมว",
     scientific: "Felis catus",
-    image: "./animal-เเมว.jpg",
+    image: "animal-cat.jpg",
     description: "เป็นสัตว์เลี้ยงลูกด้วยนม มีขนปกคลุมร่างกายและมีสี่ขา",
     classification: "Kingdom: Animalia (อาณาจักรสัตว์)\nPhylum: Chordata (สัตว์มีแกนสันหลัง)\nClass: Mammalia (สัตว์เลี้ยงลูกด้วยนม)\nOrder: Carnivora (สัตว์กินเนื้อ)\nFamily: Felidae (วงศ์แมว)\nGenus: Felis (สกุลแมว)\nSpecies: Felis catus (แมวบ้าน)",
     location: "บ้านลุงไหว่, ตึกฉัตราภิเษก"
@@ -27,9 +27,22 @@ const animalCount = document.getElementById("animal-count");
 const emptyMessage = document.getElementById("empty-message");
 const animalModal = document.getElementById("animal-modal");
 
+function createImagePlaceholder() {
+  const placeholder = document.createElement("div");
+  placeholder.className = "image-placeholder";
+  placeholder.textContent = "🐾";
+  placeholder.style.height = "220px";
+  placeholder.style.display = "flex";
+  placeholder.style.alignItems = "center";
+  placeholder.style.justifyContent = "center";
+  placeholder.style.fontSize = "45px";
+  placeholder.style.background = "#e5efdf";
+  return placeholder;
+}
+
 function renderAnimals(data) {
   animalList.innerHTML = "";
-  animalCount.textContent = `${data.length} รายการ`;
+  animalCount.textContent = data.length;
   emptyMessage.hidden = data.length !== 0;
 
   data.forEach(animal => {
@@ -64,19 +77,6 @@ function renderAnimals(data) {
   });
 }
 
-function createImagePlaceholder() {
-  const placeholder = document.createElement("div");
-  placeholder.className = "image-placeholder";
-  placeholder.textContent = "🐾";
-  placeholder.style.height = "220px";
-  placeholder.style.display = "flex";
-  placeholder.style.alignItems = "center";
-  placeholder.style.justifyContent = "center";
-  placeholder.style.fontSize = "45px";
-  placeholder.style.background = "#e5efdf";
-  return placeholder;
-}
-
 function showAnimalDetail(animal) {
   const image = document.getElementById("detail-image");
 
@@ -84,8 +84,8 @@ function showAnimalDetail(animal) {
     image.hidden = true;
   };
 
-  image.src = animal.image || "";
-  image.hidden = !animal.image;
+  image.src = animal.image;
+  image.hidden = false;
 
   document.getElementById("detail-name").textContent = animal.name;
   document.getElementById("detail-scientific").textContent = animal.scientific;
