@@ -4,7 +4,7 @@ const animals = [
     id: 1,
     name: "สุนัข",
     scientific: "Canis lupus familiaris",
-    image: "assets/images/animal-หมา.jpg",
+    image: "animal-หมา.jpg",
     description: "เป็นสัตว์เลี้ยงลูกด้วยนม มีขนปกคลุมร่างกาย มีสี่ขา มีหาง และเป็นสัตว์ที่มนุษย์นิยมเลี้ยงเป็นเพื่อนหรือช่วยเฝ้าบ้าน",
     classification: "Kingdom: Animalia (อาณาจักรสัตว์)\nPhylum: Chordata (สัตว์มีแกนสันหลัง)\nClass: Mammalia (สัตว์เลี้ยงลูกด้วยนม)\nOrder: Carnivora (สัตว์กินเนื้อ)\nFamily: Canidae (วงศ์สุนัข)\nGenus: Canis (สกุลสุนัข)",
     location: "บริเวณใต้อาคาร(มีซีเคร็ทอยู่บนตึกบ้าง)"
@@ -13,7 +13,7 @@ const animals = [
     id: 2,
     name: "แมว",
     scientific: "Felis catus",
-    image: "assets/images/animal-เเมว.jpg",
+    image: "animal-เเมว.jpg",
     description: "เป็นสัตว์เลี้ยงลูกด้วยนม มีขนปกคลุมร่างกายและมีสี่ขา",
     classification: "Kingdom: Animalia (อาณาจักรสัตว์)\nPhylum: Chordata (สัตว์มีแกนสันหลัง)\nClass: Mammalia (สัตว์เลี้ยงลูกด้วยนม)\nOrder: Carnivora (สัตว์กินเนื้อ)\nFamily: Felidae (วงศ์แมว)\nGenus: Felis (สกุลแมว)\nSpecies: Felis catus (แมวบ้าน)",
     location: "บ้านลุงไหว่,ตึกฉัตราภิเษก"
