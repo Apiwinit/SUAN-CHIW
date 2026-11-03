@@ -86,8 +86,9 @@ nav a:hover {
     z-index: 1;
 }
 
-.subtitle {
-    color: #d4edbd;
+/* BIODIVERSITY DATABASE */
+.hero .subtitle {
+    color: #285b3d;
     font-size: 13px;
     letter-spacing: 2px;
     margin-bottom: 18px;
@@ -189,6 +190,14 @@ footer {
     padding: 65px 8%;
     text-align: center;
     background: #e5efdf;
+}
+
+/* PLANT DATABASE และ ANIMAL DATABASE */
+.page-banner .subtitle {
+    color: #285b3d;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
 }
 
 .page-banner h1 {
@@ -418,15 +427,12 @@ footer {
 ======================================== */
 
 @media (max-width: 800px) {
-
     .plant-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 @media (max-width: 600px) {
-
     .navbar {
         padding: 18px 5%;
         flex-direction: column;
@@ -468,5 +474,66 @@ footer {
     .modal-content > img {
         height: 200px;
     }
+}
 
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-section {
+    padding: 55px 8%;
+    background: #e5efdf;
+}
+
+.contact-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-content .subtitle {
+    color: #285b3d;
+}
+
+.contact-content h2 {
+    color: #285b3d;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.contact-content > p:not(.subtitle) {
+    color: #647365;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.contact-info {
+    margin: 25px auto 0;
+    padding: 20px;
+    max-width: 500px;
+    background: white;
+    border-radius: 14px;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.contact-info p {
+    color: #566658;
+    font-size: 14px;
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-info strong {
+    color: #285b3d;
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 40px 6%;
+    }
+
+    .contact-content h2 {
+        font-size: 22px;
+    }
 }
